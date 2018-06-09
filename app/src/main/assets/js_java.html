@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS与JAVA代码通信</title>
+</head>
+<body>
+
+<input type="button" value="喜欢" id="btnLike">
+
+
+<script type="text/javascript">
+		
+		btnLike=document.getElementById("btnLike");
+		btnLike.addEventListener("click",like);
+
+		function like() {
+			if(window.test){
+				test.like(10,6666);
+			}else{
+				document.write("对象不存在");
+			}
+
+		}
+
+		function sayHello() {
+			document.write("hello java");
+		}
+
+		function sayMaMa(str) {
+			document.write("<br/>"+str);
+		}
+
+		<!-- JS是一种动态语言,不关系数据的类型 -->
+		function add(a,b){
+			a=Number(a);
+			b=Number(b);
+
+			var c=a+b;
+			if(window.test){
+				test.addResult(c);
+			}else{
+				document.write("addResult方法不存在");
+			}
+
+		}
+
+
+	</script>
+
+</body>
+</html>
